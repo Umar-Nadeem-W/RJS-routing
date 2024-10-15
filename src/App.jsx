@@ -5,6 +5,7 @@ import Notfound from '../pages/Notfound'
 import Nav from '../components/Nav'
 import Settings from '../pages/Settings'
 import Profile from '../pages/Profile'
+import Products from '../pages/Products'
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
     <Nav/>
     <Routes>
       <Route path='/' element={<Homepage/>}/>
+      <Route path='products/:id' element={<Products/>}/> {/*Creating a dynamic route */}
       <Route path='/dashboard' element={<Dashboard/>}>          {/* this is how nested routes are structured */}
         <Route path='settings'element={<Settings/>} />
         <Route path='profile'element={<Profile/>} />
