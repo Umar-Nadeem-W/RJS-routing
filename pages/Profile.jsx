@@ -1,3 +1,10 @@
+import { useLocation } from "react-router-dom"
+
 export default function Profile(){
-return <div>This is the profile page</div>
+
+    const location = useLocation();
+    const {username} = location.state || {} //Incase state isnt passed we need empty brackets
+
+
+return <div>This is the profile page of {username}</div>
 }
